@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osamuyimen Samson Osunde: Data Analyst and Front-End Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-mark"><span class="nav-monogram" aria-hidden="true">OO</span>OSAMUYIMEN<span>.</span>OSUNDE</div>
+    <ul class="nav-links">
+      <li><a href="#skills">Skill Matrix</a></li>
+      <li><a href="#projects">Project Log</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li class="nav-contact-item">
+        <button class="nav-contact-btn" id="contactToggle" aria-expanded="false" aria-controls="contactPop">Contact</button>
+        <div class="contact-pop" id="contactPop">
+          <div class="cp-label">Get in touch</div>
+          <a href="mailto:osamuyimenosunde@gmail.com">osamuyimenosunde@gmail.com <span class="arrow">→</span></a>
+          <a href="tel:+353872462360">+353 87 246 2360 <span class="arrow">→</span></a>
+          <a href="https://github.com/Osamuyi14" target="_blank" rel="noopener">github.com/Osamuyi14 <span class="arrow">→</span></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="name-row">
+      <div class="monogram" aria-hidden="true">OO</div>
+      <h1 class="name">Osamuyimen<span>.</span>Osunde</h1>
+    </div>
+    <div class="eyebrow">Wexford, Ireland · MSc Data Analytics, Dublin Business School</div>
+    <h2 class="title">A data analyst who already knows how information gets <em>used</em>, not just produced.</h2>
+    <p class="hero-sub">
+      I'm <strong>Muyi</strong>, currently retraining as a data analyst after three years as a front-end developer,
+      building the very dashboards and interfaces most analysts hand their work off to. That vantage point turned
+      out to be useful: I don't just model the data, I already know what happens to it next. Physics gave me the
+      instinct to look for the underlying pattern, and the MSc is giving me the tools to prove it's really there.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects">View project log</a>
+      <a class="btn btn-ghost" href="https://github.com/Osamuyi14" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-ghost" id="cvDownload" download="Osamuyimen_Osunde_CV.pdf">Download CV ↓</a>
+    </div>
+  </div>
+</header>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Skill Matrix</div>
+        <h2 class="section-title">Three tracks, one direction</h2>
+      </div>
+      <p class="section-note">Segmented by how deep each track runs today: front-end is production-tested, analytics is coursework-tested and growing fast, and tooling supports both.</p>
+    </div>
+
+    <div class="track-grid" id="skillsApp" ng-controller="SkillsCtrl">
+      <div class="track reveal" ng-repeat="track in tracks">
+        <div class="track-num">{{track.num}}</div>
+        <div class="track-title">{{track.title}}</div>
+        <div class="track-desc">{{track.desc}}</div>
+        <div class="chip-row">
+          <span class="chip" ng-class="{lead: chip.lead}" ng-repeat="chip in track.chips">{{chip.label}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Project Log</div>
+        <h2 class="section-title">What I've actually built</h2>
+      </div>
+      <p class="section-note">Grouped by discipline rather than date, so each track can be judged on its own terms.</p>
+    </div>
+
+    <div class="proj-group">
+      <div class="proj-group-head">
+        <span class="proj-group-tag">Analytics</span>
+        <span class="proj-group-title">MSc &amp; Independent Data Science</span>
+      </div>
+      <div class="proj-list">
+        <div class="proj-row reveal" data-proj="a1" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A1</div>
+          <div>
+            <div class="proj-name">Automobile Risk Classification</div>
+            <div class="proj-desc">Compared classical ML against deep learning models on a three-class, imbalanced automobile dataset for the MSc Machine Learning &amp; Pattern Recognition module.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>Python</span><span>scikit-learn</span><span>Deep Learning</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="a2" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A2</div>
+          <div>
+            <div class="proj-name">Bank Telemarketing Prediction</div>
+            <div class="proj-desc">Built on the UCI Bank Marketing dataset. Caught and removed data leakage from the call-duration variable, engineered a "contacted before" feature, then compared Decision Tree and Random Forest classifiers.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>Python</span><span>Pandas</span><span>Feature Engineering</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="a3" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A3</div>
+          <div>
+            <div class="proj-name">Statistical Modelling Suite</div>
+            <div class="proj-desc">Three-part study: binomial GLM logistic regression on Telco customer churn, a Bayesian/Poisson conjugate-prior derivation, and ARIMA forecasting on the NASDAQ Composite via yfinance.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>Python</span><span>GLM</span><span>ARIMA</span><span>Bayesian</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="a4" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A4</div>
+          <div>
+            <div class="proj-name">Student Exam Score Prediction</div>
+            <div class="proj-desc">Modelled exam performance with Decision Tree, Random Forest and SVR. SVR performed best, reaching roughly 84% R², and the breakdown was shared as a written post on LinkedIn.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>SVR</span><span>Random Forest</span><span>R²  ~0.84</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="a5" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A5</div>
+          <div>
+            <div class="proj-name">AI Student Impact Modelling</div>
+            <div class="proj-desc">Ridge Regression, Random Forest and SVR trained on a 50,000-row dataset to predict post-semester GPA, tuned with GridSearchCV.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>Ridge</span><span>GridSearchCV</span><span>50k rows</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="a6" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A6</div>
+          <div>
+            <div class="proj-name">Neural Network Forward Pass</div>
+            <div class="proj-desc">Implemented a forward pass from first principles in a Colab notebook, as groundwork for the deep-learning side of the MSc.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>NumPy</span><span>Colab</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="a7" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A7</div>
+          <div>
+            <div class="proj-name">Indomethacin Pharmacokinetics Report</div>
+            <div class="proj-desc">Statistical report in R modelling drug concentration over time, with embedded plots. An early bridge from physics-style modelling into applied statistics.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>R</span><span>Pharmacokinetics</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="a8" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">A8</div>
+          <div>
+            <div class="proj-name">Financial Planning &amp; Savings Optimisation System</div>
+            <div class="proj-desc">Simulated monthly savings growth under variable salary growth and interest rates with structured input validation, then implemented a bisection search algorithm to solve for the savings rate needed to hit a target balance. Paired with a rule-based, object-oriented timetabling system enforcing capacity and clash constraints, completed for the MSc Programming for Data Analysis CA1.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>Python</span><span>OOP</span><span>Bisection Search</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-group">
+      <div class="proj-group-head">
+        <span class="proj-group-tag" style="background:var(--ink);">Front-End</span>
+        <span class="proj-group-title">Web &amp; Applied Engineering</span>
+      </div>
+      <div class="proj-list">
+        <div class="proj-row reveal" data-proj="b1" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">B1</div>
+          <div>
+            <div class="proj-name">Xurya: Renewable Energy Landing Page</div>
+            <div class="proj-desc">Full rebuild in React, TypeScript and Vite, with dark/light mode, scroll-triggered animation and a modular component structure.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>React</span><span>TypeScript</span><span>Vite</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="b2" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">B2</div>
+          <div>
+            <div class="proj-name">Prodmast Landing Page</div>
+            <div class="proj-desc">Independent landing page project focused on clean layout and component reuse.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>React</span><span>CSS</span></div>
+        </div>
+        <div class="proj-row reveal" data-proj="b3" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="proj-idx">B3</div>
+          <div>
+            <div class="proj-name">Python CLI Utilities</div>
+            <div class="proj-desc">A set of command-line scripts written independently of coursework, marking the earliest crossover point between front-end habits and Python.</div>
+            <div class="proj-view-hint">View case study <span class="arrow">→</span></div>
+          </div>
+          <div class="proj-stack"><span>Python</span><span>CLI</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:40px;font-family:var(--mono);font-size:12.5px;color:var(--muted);">
+      Full source and commit history: <a href="https://github.com/Osamuyi14" target="_blank" rel="noopener" style="color:var(--red);text-decoration:underline;">github.com/Osamuyi14</a>
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Experience</div>
+        <h2 class="section-title">Where the front-end track was built</h2>
+      </div>
+    </div>
+    <div class="exp-list">
+      <div class="exp-row reveal">
+        <div class="exp-period">Most Recent</div>
+        <div>
+          <div class="exp-role">Junior Front-End Developer</div>
+          <div class="exp-org">RescueTap</div>
+          <div class="exp-desc">Built and maintained user-facing interfaces, working within a production front-end codebase.</div>
+        </div>
+      </div>
+      <div class="exp-row reveal">
+        <div class="exp-period">Prior</div>
+        <div>
+          <div class="exp-role">Front-End Developer</div>
+          <div class="exp-org">Aiki Technologies Limited</div>
+          <div class="exp-desc">Developed component-driven interfaces and contributed to ongoing feature work across client projects.</div>
+        </div>
+      </div>
+      <div class="exp-row reveal">
+        <div class="exp-period">Earlier</div>
+        <div>
+          <div class="exp-role">Web Developer Intern</div>
+          <div class="exp-org">Audu-Nepad</div>
+          <div class="exp-desc">First professional exposure to web development, building foundational HTML, CSS and JavaScript skills.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-label">Education</div>
+        <h2 class="section-title">The two degrees this profile sits between</h2>
+      </div>
+    </div>
+    <div class="exp-list">
+      <div class="exp-row reveal">
+        <div class="exp-period">Exp. Apr 2027</div>
+        <div>
+          <div class="exp-role">MSc Data Analytics</div>
+          <div class="exp-org">Dublin Business School</div>
+          <div class="exp-desc">Coursework spanning machine learning, statistics and programming for data analysis, including modules in Machine Learning &amp; Pattern Recognition, Programming for Data Analysis, and Statistics for Data Analytics.</div>
+        </div>
+      </div>
+      <div class="exp-row reveal">
+        <div class="exp-period">Completed</div>
+        <div>
+          <div class="exp-role">BSc Physics</div>
+          <div class="exp-org">University of Benin</div>
+          <div class="exp-desc">Quantitative foundation in modelling physical systems, the same instinct now applied to data.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-big">Looking for a<br><em>data analyst</em><br>who ships<br>front-end too.</div>
+        <div class="contact-links">
+          <a href="mailto:osamuyimenosunde@gmail.com">Email <span class="arrow">→</span></a>
+          <a href="tel:+353872462360">Phone <span class="arrow">→</span></a>
+          <a href="https://github.com/Osamuyi14" target="_blank" rel="noopener">GitHub <span class="arrow">→</span></a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="contact-meta">
+          <div class="row"><span class="k">Based in</span><span class="v">Wexford, Ireland</span></div>
+          <div class="row"><span class="k">Targeting</span><span class="v">Data Analyst / Analytics-adjacent</span></div>
+          <div class="row"><span class="k">Also open to</span><span class="v">Front-End Developer roles</span></div>
+          <div class="row"><span class="k">Long-term</span><span class="v">Sports analytics</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;">
+    <span>© 2026 Osamuyimen Samson Osunde</span>
+    <span>Built to run the regression, not just report it.</span>
+  </div>
+</footer>
+
+<!-- Local vendor libraries (no CDN dependency) -->
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="vendor/angular.min.js"></script>
+
+<!-- App scripts -->
+<script src="react-app.js"></script>
+<script src="angular-app.js"></script>
+<script src="script.js"></script>
+
+
+<div id="modalRoot"></div>
+
+</body>
+</html>
