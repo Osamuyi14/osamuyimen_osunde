@@ -5,10 +5,9 @@ Personal portfolio site: data analyst (MSc, Dublin Business School) with a front
 ## Stack
 
 - HTML5 / CSS3
-- Vanilla JavaScript (scroll reveal, contact popover, CV download)
+- Vanilla JavaScript (scroll reveal, contact popover, CV download, skill matrix)
 - React (project detail modal, `react-app.js`)
-- AngularJS (Skill Matrix section, `angular-app.js`)
-- React and AngularJS libraries are bundled locally in `vendor/` rather than pulled from a CDN
+- React library is bundled locally in `vendor/` rather than pulled from a CDN
 
 ## Structure
 
@@ -17,8 +16,7 @@ index.html          markup
 style.css           all styling
 script.js           plain JS behaviour
 react-app.js         React project modal component
-angular-app.js       AngularJS skill matrix controller
-vendor/              local React, ReactDOM, and AngularJS library files
+vendor/              local React and ReactDOM library files
 projects/            supporting project materials (reports, notebooks, slide decks)
 ```
 
